@@ -4,8 +4,8 @@ const port = 3000
 
 app.get('/', (req, res) => {
   res.send('API movies.');
-})
+});
 
 app.listen(port, () => {
   console.log(`Servidor corriendo en ${port}`)
-})
+});
