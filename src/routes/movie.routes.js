@@ -1,17 +1,18 @@
-import { Router } from "express";
+import { Router } from 'express';
 import { 
     getAllMovies,
     createMovie,
     getMovieById,
     updateMovie,
-    deleteMovie } from "../controllers/movie.controllers";
+    deleteMovie 
+} from "../controllers/movie.controllers.js";
 
-const routes = Router();
+const router = Router();
 
-Router.get('/api/movies', getAllMovies);
-Router.get('/api/movies/:id', getMovieById);
-Router.post('/api/movies', createMovie);
-Router.put('/api/movies/:id', updateMovie);
-Router.delete('/api/movies/:id', deleteMovie);
+router.get('/api/movies', getAllMovies);
+router.get('/api/movies/:id', getMovieById);
+router.post('/api/movies', createMovie);
+router.put('/api/movies/:id', updateMovie);
+router.delete('/api/movies/:id', deleteMovie);
 
-export default routes;
+export default router;

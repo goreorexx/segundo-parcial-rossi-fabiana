@@ -1,6 +1,6 @@
 import { Sequelize } from "sequelize";
 
-const createMovie = async (req, res) => {
+export const createMovie = async (req, res) => {
     try {
         const { title, director, duration, genre, description } = req.body;
         if (!(await isNameUnique(name))) {
